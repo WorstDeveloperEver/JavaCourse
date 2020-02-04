@@ -11,15 +11,15 @@ public class QuadraticEquation {
         // Случаи когда уравнение не является квадратным
         double epsilon = 1.0e-10;
 
-        if ((Math.abs(a - 0) <= epsilon) && (Math.abs(b - 0) <= epsilon) && (Math.abs(c - 0) <= epsilon)) {
-            System.out.println("Answer: 0 = 0");
+        if ((Math.abs(a) <= epsilon) && (Math.abs(b) <= epsilon) && (Math.abs(c) <= epsilon)) {
+            System.out.println("Answer: x1 = 1; x2 = 0/0");
             return;
         }
-        if ((Math.abs(a - 0) <= epsilon) && (Math.abs(b - 0) <= epsilon) && (Math.abs(c - 0) > epsilon)) {
-            System.out.printf("Answer: %.2f != 0", c);
+        if ((Math.abs(a) <= epsilon) && (Math.abs(b) <= epsilon)) {
+            System.out.println("No solution");
             return;
         }
-        if (Math.abs(a - 0) <= epsilon) {
+        if (Math.abs(a) <= epsilon) {
             double x = -c / b;
 
             System.out.printf("Answer: x = %.2f", x);
@@ -29,11 +29,11 @@ public class QuadraticEquation {
         // Решаем квадратное уравнение
         double discriminant = Math.pow(b, 2) - 4 * a * c;
 
-        if (Math.abs(discriminant - 0) <= epsilon) {
+        if (Math.abs(discriminant) <= epsilon) {
             double x = -b / (2 * a);
 
             System.out.printf("Answer: x = %.2f", x);
-        } else if (discriminant - 0 > epsilon) {
+        } else if (discriminant > epsilon) {
             double x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
             double x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
 
@@ -43,10 +43,10 @@ public class QuadraticEquation {
         }
     }
 
-    private static double getNumber(String number) {
+    private static double getNumber(String userMustEnter) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.printf("Enter number %s:%n", number);
+        System.out.printf("Enter number %s:%n", userMustEnter);
         return scanner.nextDouble();
     }
 }

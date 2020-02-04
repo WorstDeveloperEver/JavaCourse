@@ -20,7 +20,7 @@ public class Age {
         }
 
         // Учитываем склонение чисел
-        if (age / 10 == 1 || (age % 100 > 10 && age % 100 < 20)) {
+        if (age % 100 > 10 && age % 100 < 20) {
             System.out.printf("Вам %d лет", age);
             return;
         }
