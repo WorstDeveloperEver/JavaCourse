@@ -22,7 +22,7 @@ public class NextDate {
                 daysInMonthCount = 31;
                 break;
             case 2:
-                if (isNotLeapYear(year)) {
+                if (year % 4 != 0 || (year % 100 == 0 && year % 400 != 0)) {
                     daysInMonthCount = 28;
                 } else {
                     daysInMonthCount = 29;
@@ -48,14 +48,10 @@ public class NextDate {
         }
     }
 
-    private static int readNumberFromConsole(String userMustEnter) {
+    private static int readNumberFromConsole(String message) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.printf("Enter %s:%n", userMustEnter);
+        System.out.printf("Enter %s:%n", message);
         return scanner.nextInt();
-    }
-
-    private static boolean isNotLeapYear(int year){
-        return year % 4 != 0 || (year % 100 == 0 && year % 400 != 0);
     }
 }
