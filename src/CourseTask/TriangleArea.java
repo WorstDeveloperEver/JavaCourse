@@ -29,10 +29,10 @@ public class TriangleArea {
         System.out.printf("Triangle area: %.2f", triangleArea);
     }
 
-    private static double getNumber(String number) {
+    private static double getNumber(String userEntersFromConsole) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.printf("Enter number %s:%n", number);
+        System.out.printf("Enter number %s:%n", userEntersFromConsole);
         return scanner.nextDouble();
     }
 }
