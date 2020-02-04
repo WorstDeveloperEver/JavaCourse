@@ -35,6 +35,5 @@ public class Fibonacci {
             i++;
         }
         System.out.println("Answer: " + fibonacciN2);
-
     }
 }
