@@ -19,7 +19,7 @@ public class Switch {
                 System.out.printf("%d * %d = %d", numberA, numberB, numberA * numberB);
                 break;
             case 4:
-                System.out.printf("%d / %d = %d", numberA, numberB, numberA / numberB);
+                System.out.printf("%d / %d = %.1f", numberA, numberB, (double) numberA / numberB);
                 break;
             default:
                 System.out.println("Wrong command");
@@ -27,10 +27,10 @@ public class Switch {
         }
     }
 
-    private static int getNumber(String number) {
+    private static int getNumber(String message) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.printf("Enter %s:%n", number);
+        System.out.printf("Enter %s:%n", message);
         return scanner.nextInt();
     }
 }

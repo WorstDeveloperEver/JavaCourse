@@ -2,31 +2,33 @@ package Lecture4;
 
 public class DoWhile {
     public static void main(String[] args) {
-        int startRange = 3;
-        int endRange = 17;
+        int rangeStart = 3;
+        int rangeEnd = 17;
 
-        int i = startRange;
+        int i = rangeStart;
         int sum = 0;
-        int j = 0;
+        int digitCount = 0;
         do {
             sum += i;
             i++;
-            j++;
-        } while (i <= endRange);
+            digitCount++;
+        } while (i <= rangeEnd);
 
-        System.out.printf("Average = %.2f%n", (double) sum / j);
+        double average = (double) sum / digitCount;
+        System.out.printf("Average = %.2f%n", average);
 
-        i = startRange;
+        i = rangeStart;
         sum = 0;
-        j = 0;
+        digitCount = 0;
         do {
             if (i % 2 == 0) {
                 sum += i;
-                j++;
+                digitCount++;
             }
             i++;
-        } while (i <= endRange);
+        } while (i <= rangeEnd);
 
-        System.out.printf("Average of even numbers = %.2f", (double) sum / j);
+        average = (double) sum / digitCount;
+        System.out.printf("Average of even numbers = %.2f", average);
     }
 }

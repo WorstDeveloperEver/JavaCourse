@@ -2,31 +2,33 @@ package Lecture4;
 
 public class Average {
     public static void main(String[] args) {
-        int startRange = 2;
-        int endRange = 10;
+        int rangeStart = 2;
+        int rangeEnd = 15;
 
-        int i = startRange;
+        int i = rangeStart;
         int sum = 0;
-        int j = 0;
-        while (i <= endRange) {
+        int digitCount = 0;
+        while (i <= rangeEnd) {
             sum += i;
             i++;
-            j++;
+            digitCount++;
         }
 
-        System.out.printf("Average = %.2f%n", (double) sum / j);
+        double average = (double) sum / digitCount;
+        System.out.printf("Average = %.2f%n", average);
 
-        i = startRange;
+        i = rangeStart;
         sum = 0;
-        j = 0;
-        while (i <= endRange) {
+        digitCount = 0;
+        while (i <= rangeEnd) {
             if (i % 2 == 0) {
                 sum += i;
-                j++;
+                digitCount++;
             }
             i++;
         }
 
-        System.out.printf("Average of even numbers = %.2f", (double) sum / j);
+        average = (double) sum / digitCount;
+        System.out.printf("Average = %.2f%n", average);
     }
 }
