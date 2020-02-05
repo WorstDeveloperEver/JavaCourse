@@ -2,7 +2,7 @@ package Lecture4;
 
 import java.util.Scanner;
 
-public class NumbersDigit {
+public class NumberDigits {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -29,6 +29,6 @@ public class NumbersDigit {
             i /= 10;
         }
 
-        System.out.printf("Sum digit = %d, Sum odd digit = %d, Max digit = %d", digitsSum, oddDigitsSum, digitMax);
+        System.out.printf("Sum digits = %d, Sum odd digits = %d, Max digit = %d", digitsSum, oddDigitsSum, digitMax);
     }
 }

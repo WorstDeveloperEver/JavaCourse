@@ -16,7 +16,6 @@ public class RangeSum {
             } else {
                 System.out.printf("%d + ", i * i);
             }
-
             i++;
         }
     }

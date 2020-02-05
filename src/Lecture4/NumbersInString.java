@@ -7,12 +7,12 @@ public class NumbersInString {
         int numbersInStringCount = 25;
 
         int i = numberStart;
-        int j = 0;
+        int numbersPrintCount = 0;
         while (i <= numberEnd) {
             System.out.printf("%4d", i);
 
-            j++;
-            if (j % numbersInStringCount == 0) {
+            numbersPrintCount++;
+            if (numbersPrintCount % numbersInStringCount == 0) {
                 System.out.println();
             }
             i++;
