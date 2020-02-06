@@ -12,7 +12,7 @@ public class QuadraticEquation {
         double epsilon = 1.0e-10;
 
         if ((Math.abs(a) <= epsilon) && (Math.abs(b) <= epsilon) && (Math.abs(c) <= epsilon)) {
-            System.out.println("Answer: x1 = 1; x2 = 0/0");
+            System.out.println("Any number is answer");
             return;
         }
         if ((Math.abs(a) <= epsilon) && (Math.abs(b) <= epsilon)) {
@@ -43,10 +43,10 @@ public class QuadraticEquation {
         }
     }
 
-    private static double getNumber(String userMustEnter) {
+    private static double getNumber(String message) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.printf("Enter number %s:%n", userMustEnter);
+        System.out.printf("Enter number %s:%n", message);
         return scanner.nextDouble();
     }
 }
