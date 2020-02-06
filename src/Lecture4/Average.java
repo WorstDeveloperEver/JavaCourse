@@ -7,28 +7,28 @@ public class Average {
 
         int i = rangeStart;
         int sum = 0;
-        int digitCount = 0;
+        int numbersCount = 0;
         while (i <= rangeEnd) {
             sum += i;
             i++;
-            digitCount++;
+            numbersCount++;
         }
 
-        double average = (double) sum / digitCount;
+        double average = (double) sum / numbersCount;
         System.out.printf("Average = %.2f%n", average);
 
         i = rangeStart;
         sum = 0;
-        digitCount = 0;
+        numbersCount = 0;
         while (i <= rangeEnd) {
             if (i % 2 == 0) {
                 sum += i;
-                digitCount++;
+                numbersCount++;
             }
             i++;
         }
 
-        average = (double) sum / digitCount;
+        average = (double) sum / numbersCount;
         System.out.printf("Average = %.2f%n", average);
     }
 }
