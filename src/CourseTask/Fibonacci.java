@@ -21,19 +21,22 @@ public class Fibonacci {
             System.out.println("Answer: " + fibonacciN0);
             return;
         }
+
         if (searchNumber == 1) {
             System.out.println("Answer: " + fibonacciN1);
             return;
         }
 
-        int fibonacciN2 = 0;
+        int fibonacciN2 = 1;
         int i = 3;
-        while (i <= searchNumber) {
+        while (i <= searchNumber + 1) {
             fibonacciN2 = fibonacciN0 + fibonacciN1;
             fibonacciN0 = fibonacciN1;
             fibonacciN1 = fibonacciN2;
+            System.out.printf("%d ", fibonacciN2);
             i++;
         }
+
         System.out.println("Answer: " + fibonacciN2);
     }
 }
