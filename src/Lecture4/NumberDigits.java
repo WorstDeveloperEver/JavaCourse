@@ -12,7 +12,7 @@ public class NumberDigits {
         int i = Math.abs(number);
         int digitsSum = 0;
         int oddDigitsSum = 0;
-        int digitMax = 0;
+        int maxDigit = 0;
 
         while (i > 0) {
             int digit = i % 10;
@@ -23,12 +23,13 @@ public class NumberDigits {
                 oddDigitsSum += digit;
             }
 
-            if (digitMax < digit) {
-                digitMax = digit;
+            if (maxDigit < digit) {
+                maxDigit = digit;
             }
+
             i /= 10;
         }
 
-        System.out.printf("Sum digits = %d, Sum odd digits = %d, Max digit = %d", digitsSum, oddDigitsSum, digitMax);
+        System.out.printf("Digits sum = %d, Odd digits sum = %d, Max digit = %d", digitsSum, oddDigitsSum, maxDigit);
     }
 }

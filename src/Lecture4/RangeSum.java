@@ -7,15 +7,22 @@ public class RangeSum {
         int sum = 0;
 
         while (i <= numbersCount) {
-            sum = (i % 2 != 0) ? (sum + i * i) : (sum - i * i);
+            int squaredI = i * i;
+
+            if (i % 2 != 0) {
+                sum += squaredI;
+            } else {
+                sum -= squaredI;
+            }
 
             if (i == numbersCount) {
-                System.out.printf("%d = %d", i * i, sum);
+                System.out.printf("%d = %d", squaredI, sum);
             } else if (i % 2 != 0) {
-                System.out.printf("%d - ", i * i);
+                System.out.printf("%d - ", squaredI);
             } else {
-                System.out.printf("%d + ", i * i);
+                System.out.printf("%d + ", squaredI);
             }
+
             i++;
         }
     }
