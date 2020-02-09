@@ -10,6 +10,7 @@ public class NextDate {
 
         // Определяем количество дней в месяце
         int daysInMonthCount;
+        boolean isYearLeap = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
 
         switch (month) {
             case 1:
@@ -22,10 +23,10 @@ public class NextDate {
                 daysInMonthCount = 31;
                 break;
             case 2:
-                if (year % 4 != 0 || (year % 100 == 0 && year % 400 != 0)) {
-                    daysInMonthCount = 28;
-                } else {
+                if (isYearLeap) {
                     daysInMonthCount = 29;
+                } else {
+                    daysInMonthCount = 28;
                 }
                 break;
             default:
