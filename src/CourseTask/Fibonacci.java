@@ -33,7 +33,6 @@ public class Fibonacci {
             fibonacciN2 = fibonacciN0 + fibonacciN1;
             fibonacciN0 = fibonacciN1;
             fibonacciN1 = fibonacciN2;
-            System.out.printf("%d ", fibonacciN2);
             i++;
         }
 
