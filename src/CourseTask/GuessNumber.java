@@ -8,8 +8,7 @@ public class GuessNumber {
         Random random = new Random();
 
         int guessedNumber = random.nextInt(100) + 1;
-        int userNumber;
-        int attemptCount = 0;
+        int userNumber, attemptCount = 0;
 
         do {
             userNumber = getUserNumber();
