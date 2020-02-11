@@ -2,14 +2,14 @@ package Lecture4;
 
 public class NumbersInString {
     public static void main(String[] args) {
-        int numberStart = 1;
-        int numberEnd = 100;
+        int startNumber = 1;
+        int endNumber = 100;
         int numbersInStringCount = 25;
 
-        int i = numberStart;
+        int i = startNumber;
         int printedNumbersCount = 0;
 
-        while (i <= numberEnd) {
+        while (i <= endNumber) {
             System.out.printf("%4d", i);
 
             printedNumbersCount++;
@@ -17,6 +17,7 @@ public class NumbersInString {
             if (printedNumbersCount % numbersInStringCount == 0) {
                 System.out.println();
             }
+
             i++;
         }
     }

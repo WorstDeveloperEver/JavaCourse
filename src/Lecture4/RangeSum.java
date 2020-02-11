@@ -7,20 +7,20 @@ public class RangeSum {
         int sum = 0;
 
         while (i <= numbersCount) {
-            int squaredI = i * i;
+            int rangeNumber = i * i;
 
             if (i % 2 != 0) {
-                sum += squaredI;
+                sum += rangeNumber;
             } else {
-                sum -= squaredI;
+                sum -= rangeNumber;
             }
 
             if (i == numbersCount) {
-                System.out.printf("%d = %d", squaredI, sum);
+                System.out.printf("%d = %d", rangeNumber, sum);
             } else if (i % 2 != 0) {
-                System.out.printf("%d - ", squaredI);
+                System.out.printf("%d - ", rangeNumber);
             } else {
-                System.out.printf("%d + ", squaredI);
+                System.out.printf("%d + ", rangeNumber);
             }
 
             i++;
