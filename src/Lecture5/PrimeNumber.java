@@ -22,15 +22,12 @@ public class PrimeNumber {
     }
 
     private static boolean isPrimeNumber(int number) {
-        boolean isPrimeNumber = true;
-
         for (int i = 2; i < number; i++) {
             if (number % i == 0) {
-                isPrimeNumber = false;
-                break;
+                return false;
             }
         }
 
-        return isPrimeNumber;
+        return true;
     }
 }
