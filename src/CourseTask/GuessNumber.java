@@ -8,24 +8,24 @@ public class GuessNumber {
         Random random = new Random();
 
         int guessedNumber = random.nextInt(100) + 1;
-        int userNumber, attemptCount = 0;
+        int userNumber;
+        int attemptCounts = 0;
 
-        do {
+        for (; ; ) {
             userNumber = getUserNumber();
-            attemptCount++;
+            attemptCounts++;
 
             if (userNumber == guessedNumber) {
-                System.out.print("Correct answer, ");
                 break;
-            } else if (userNumber < guessedNumber) {
+            }
+            if (userNumber < guessedNumber) {
                 System.out.println("Less than the guessed number");
             } else {
                 System.out.println("Greater than the guessed number");
             }
+        }
 
-        } while (true);
-
-        System.out.print("attempt count = " + attemptCount);
+        System.out.print("Correct answer, attempt count = " + attemptCounts);
     }
 
     private static int getUserNumber() {
