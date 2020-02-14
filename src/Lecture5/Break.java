@@ -4,20 +4,18 @@ import java.util.Scanner;
 
 public class Break {
     public static void main(String[] args) {
-        String answer = "Java";
-        String userString;
+        String givenString = "Java";
 
-        do {
-            userString = getUserString();
+        for (; ; ) {
+            String userString = getUserString();
 
-            if (userString.equals(answer)) {
+            if (userString.equals(givenString)) {
                 System.out.println("Correct answer");
                 break;
-            } else {
-                System.out.println("Wrong answer");
             }
 
-        } while (true);
+            System.out.println("Wrong answer");
+        }
     }
 
     private static String getUserString() {
