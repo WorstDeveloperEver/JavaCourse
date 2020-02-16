@@ -9,10 +9,10 @@ public class PrintAndRead {
         String message = "Enter number:";
         int b = printAndRead(message);
 
-        System.out.printf("Number a = %d, and number b = %d", a, b);
+        System.out.printf("Number a = %d and number b = %d", a, b);
     }
 
-    public static int printAndRead (String message){
+    public static int printAndRead(String message) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println(message);
