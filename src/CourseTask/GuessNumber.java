@@ -8,16 +8,18 @@ public class GuessNumber {
         Random random = new Random();
 
         int guessedNumber = random.nextInt(100) + 1;
-        int userNumber;
-        int attemptCounts = 0;
+        int attemptsCount = 0;
+
+        System.out.println("Computer picks up a random number, try to guess.");
 
         for (; ; ) {
-            userNumber = getUserNumber();
-            attemptCounts++;
+            int userNumber = getUserNumber();
+            attemptsCount++;
 
             if (userNumber == guessedNumber) {
                 break;
             }
+
             if (userNumber < guessedNumber) {
                 System.out.println("Less than the guessed number");
             } else {
@@ -25,7 +27,7 @@ public class GuessNumber {
             }
         }
 
-        System.out.print("Correct answer, attempt count = " + attemptCounts);
+        System.out.print("Correct answer, attempt count = " + attemptsCount);
     }
 
     private static int getUserNumber() {
