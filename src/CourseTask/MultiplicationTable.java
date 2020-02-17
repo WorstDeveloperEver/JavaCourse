@@ -6,8 +6,8 @@ public class MultiplicationTable {
 
         System.out.printf("%n     ");
 
-        for (int i = 0; i < tableSize; i++) {
-            System.out.printf("%4d", i + 1);
+        for (int i = 1; i <= tableSize; i++) {
+            System.out.printf("%4d", i);
         }
 
         System.out.printf("%n     ");
