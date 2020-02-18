@@ -20,7 +20,7 @@ public class MultiplicationTable {
             System.out.printf("%n%3d |", i);
 
             for (int j = 1; j <= tableSize; j++) {
-                System.out.printf("%4d", (i) * (j));
+                System.out.printf("%4d", i * j);
             }
         }
     }
