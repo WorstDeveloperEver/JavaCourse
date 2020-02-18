@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Deposit {
     public static void main(String[] args) {
-        double depositPeriodInMonths = getUserNumber("deposit period in months");
+        int depositPeriodInMonths = (int) getUserNumber("deposit period in months");
         double depositAmount = getUserNumber("deposit amount");
         double percent = getUserNumber("percent") / 100;
         double depositAfterPeriod = depositAmount;
