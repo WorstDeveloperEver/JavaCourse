@@ -19,7 +19,7 @@ public class Deposit {
         System.out.printf("Deposit amount after period = %.2f, profit = %.2f", depositAfterPeriod, depositProfit);
     }
 
-    public static double getUserNumber (String message){
+    public static double getUserNumber(String message) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.printf("Enter %s: ", message);
