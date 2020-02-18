@@ -2,7 +2,7 @@ package Lecture6;
 
 import java.util.Scanner;
 
-public class TemperatureTranslation {
+public class TemperatureConversion {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -10,7 +10,6 @@ public class TemperatureTranslation {
         double celsiusDegrees = scanner.nextDouble();
 
         System.out.printf("%.2f °C = %.2f °F %n", celsiusDegrees, convertToFahrenheit(celsiusDegrees));
-
         System.out.printf("%.2f °C = %.2f K", celsiusDegrees, convertToKelvin(celsiusDegrees));
     }
 
