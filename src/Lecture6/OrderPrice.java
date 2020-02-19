@@ -4,35 +4,30 @@ import java.util.Scanner;
 
 public class OrderPrice {
     public static void main(String[] args) {
-        int goodsFirstCount = getGoodsCount("Enter the count of the first goods:");
-        int goodsSecondCount = getGoodsCount("Enter the count of the second goods:");
+        int goods1Count = getGoodsCount("Enter the count of the first goods:");
+        int goods2Count = getGoodsCount("Enter the count of the second goods:");
 
-        int goodsInOrderCount = goodsFirstCount + goodsSecondCount;
+        double goods1Price = 150;
+        double goods2Price = 90;
 
-        int goodsFirstPrice = 150;
-        int goodsSecondPrice = 90;
-
-        int goodsInOrderPrice = goodsFirstPrice * goodsFirstCount + goodsSecondPrice * goodsSecondCount;
-
-        double finalPrice = getFinalPrice(goodsInOrderPrice, getDiscount(goodsInOrderCount, goodsInOrderPrice));
+        double finalPrice = getFinalPrice(goods1Count, goods2Count, goods1Price, goods2Price);
 
         System.out.printf("Final price = %.2f rubles", finalPrice);
     }
 
-    public static double getDiscount(int goodsInOrderCount, int goodsInOrderPrice) {
-        if (goodsInOrderCount >= 10 && goodsInOrderPrice >= 1000) {
-            return 10;
-        }
+    public static double getFinalPrice(int goods1Count, int goods2Count, double goods1Price, double goods2Price) {
+        double goodsInOrderPrice = goods1Price * goods1Count + goods2Price * goods2Count;
 
-        if ((goodsInOrderCount >= 10 || goodsInOrderPrice >= 1000)) {
-            return 5;
-        }
+        int discountValue = 5;
+        int discountByCount = 10;
+        int discountByPrice = 1000;
 
-        return 0;
-    }
+        int discountCount = ((goods1Count + goods2Count) >= discountByCount) ? discountValue : 0;
+        double discountPrice = (goodsInOrderPrice >= discountByPrice) ? discountValue : 0;
 
-    public static double getFinalPrice(int goodsInOrderPrice, double discount) {
-        return goodsInOrderPrice * (100 - discount) / 100;
+        double discountFinal = (discountCount + discountPrice) / 100;
+
+        return goodsInOrderPrice - goodsInOrderPrice * discountFinal;
     }
 
     public static int getGoodsCount(String message) {
