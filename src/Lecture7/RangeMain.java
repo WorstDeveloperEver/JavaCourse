@@ -4,7 +4,7 @@ public class RangeMain {
     public static void main(String[] args) {
         Range range = new Range(2, 9.5);
 
-        System.out.println("Length = " + range.length());
+        System.out.println("Length = " + range.getLength());
 
         range.setFrom(5);
         range.setTo(15);
@@ -13,6 +13,6 @@ public class RangeMain {
 
         double number = 14.9;
 
-        System.out.printf("Number %.2f is inside? %b", number, range.isInside(number));
+        System.out.printf("Number %.2f is inside? %b%n", number, range.isInside(number));
     }
 }

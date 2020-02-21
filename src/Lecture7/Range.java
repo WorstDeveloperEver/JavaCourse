@@ -25,8 +25,8 @@ public class Range {
         this.to = to;
     }
 
-    public double length() {
-        return Math.abs(this.to - this.from);
+    public double getLength() {
+        return this.to - this.from;
     }
 
     public boolean isInside(double number) {
