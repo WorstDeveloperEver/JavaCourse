@@ -4,18 +4,20 @@ import java.util.Scanner;
 
 public class Deposit {
     public static void main(String[] args) {
-        int depositPeriodInMonths = (int) getUserNumber("deposit period in months");
+        int depositPeriodInMonths = getDepositPeriodInMonths("deposit period in months");
         double depositAmount = getUserNumber("deposit amount");
-        double percent = getUserNumber("percent") / 100;
+
+        final int oneHundred = 100;
+        final int monthInYearCount = 12;
+        double percent = getUserNumber("percent") / (oneHundred * monthInYearCount);
+
         double depositAfterPeriod = depositAmount;
 
         for (int i = 0; i < depositPeriodInMonths; i++) {
-            double depositProfitInMonth = depositAfterPeriod * percent / 12;
-            depositAfterPeriod += depositProfitInMonth;
+            depositAfterPeriod += depositAfterPeriod * percent;
         }
 
         double depositProfit = depositAfterPeriod - depositAmount;
-
         System.out.printf("Deposit amount after period = %.2f, profit = %.2f", depositAfterPeriod, depositProfit);
     }
 
@@ -24,5 +26,12 @@ public class Deposit {
 
         System.out.printf("Enter %s: ", message);
         return scanner.nextDouble();
+    }
+
+    public static int getDepositPeriodInMonths(String message) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.printf("Enter %s: ", message);
+        return scanner.nextInt();
     }
 }
