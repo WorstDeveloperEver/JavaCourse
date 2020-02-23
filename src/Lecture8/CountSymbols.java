@@ -15,6 +15,7 @@ public class CountSymbols {
 
         for (int i = 0; i < userString.length(); i++) {
             char symbol = userString.charAt(i);
+
             if (Character.isLetter(symbol)) {
                 charsCount++;
             }
