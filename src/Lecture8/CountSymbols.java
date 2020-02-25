@@ -9,26 +9,23 @@ public class CountSymbols {
         System.out.println("Enter string:");
         String userString = scanner.nextLine();
 
-        int numbersCount = 0;
-        int charsCount = 0;
+        int digitsCount = 0;
+        int lettersCount = 0;
         int spacesCount = 0;
 
         for (int i = 0; i < userString.length(); i++) {
             char symbol = userString.charAt(i);
 
             if (Character.isLetter(symbol)) {
-                charsCount++;
-            }
-            if (Character.isDigit(symbol)) {
-                numbersCount++;
-            }
-            if (Character.isWhitespace(symbol)) {
+                lettersCount++;
+            }else if (Character.isDigit(symbol)) {
+                digitsCount++;
+            }else if (Character.isWhitespace(symbol)) {
                 spacesCount++;
             }
         }
 
-        int symbolsCount = userString.length() - (numbersCount + charsCount + spacesCount);
-
-        System.out.printf("Chars = %d, Numbers = %d, Spaces = %d, Symbols = %d", charsCount, numbersCount, spacesCount, symbolsCount);
+        int symbolsCount = userString.length() - (digitsCount + lettersCount + spacesCount);
+        System.out.printf("Letter = %d, Numbers = %d, Spaces = %d, Symbols = %d", lettersCount, digitsCount, spacesCount, symbolsCount);
     }
 }
