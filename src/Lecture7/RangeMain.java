@@ -11,7 +11,7 @@ public class RangeMain {
 
         System.out.printf("New range - from %.2f to %.2f%n", range.getFrom(), range.getTo());
 
-        double number = 14.9;
+        double number = 15;
 
         System.out.printf("Number %.2f is inside? %b%n", number, range.isInside(number));
     }

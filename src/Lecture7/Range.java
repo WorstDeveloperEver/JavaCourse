@@ -26,12 +26,12 @@ public class Range {
     }
 
     public double getLength() {
-        return this.to - this.from;
+        return to - from;
     }
 
     public boolean isInside(double number) {
         double epsilon = 1e-10;
 
-        return (number - from > epsilon && to - number > epsilon) || (Math.abs(from - number) <= epsilon || Math.abs(to - number) <= epsilon);
+        return (from - number < epsilon && number - to < epsilon);
     }
 }
