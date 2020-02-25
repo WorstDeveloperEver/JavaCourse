@@ -18,9 +18,9 @@ public class CountSymbols {
 
             if (Character.isLetter(symbol)) {
                 lettersCount++;
-            }else if (Character.isDigit(symbol)) {
+            } else if (Character.isDigit(symbol)) {
                 digitsCount++;
-            }else if (Character.isWhitespace(symbol)) {
+            } else if (Character.isWhitespace(symbol)) {
                 spacesCount++;
             }
         }
