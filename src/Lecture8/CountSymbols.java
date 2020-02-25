@@ -25,7 +25,7 @@ public class CountSymbols {
             }
         }
 
-        int symbolsCount = userString.length() - (digitsCount + lettersCount + spacesCount);
-        System.out.printf("Letter = %d, Numbers = %d, Spaces = %d, Symbols = %d", lettersCount, digitsCount, spacesCount, symbolsCount);
+        int otherSymbolsCount = userString.length() - (digitsCount + lettersCount + spacesCount);
+        System.out.printf("Letter = %d, Digits = %d, Spaces = %d, Symbols = %d", lettersCount, digitsCount, spacesCount, otherSymbolsCount);
     }
 }
