@@ -2,7 +2,7 @@ package Lecture9;
 
 public class MultiplicationTableArray {
     public static void main(String[] args) {
-        int size = 10;
+        final int size = 10;
         int[][] multiplicationTable = getMultiplicationTable(size);
 
         for (int i = 0; i < size; i++) {
