@@ -8,13 +8,13 @@ public class Palindrome {
 
         System.out.println("Enter string:");
         String userString = scanner.nextLine();
-        
-        if (userString.equals("")){
+
+        if (userString.equals("")) {
             System.out.println("Wrong string, there is no letters");
             return;
         }
 
-        if (isNoLettersString(userString)){
+        if (isNoLettersString(userString)) {
             System.out.println("Wrong string, there is no letters");
             return;
         }
@@ -56,10 +56,10 @@ public class Palindrome {
         return true;
     }
 
-    private static boolean isNoLettersString(String string){
+    private static boolean isNoLettersString(String string) {
         char[] array = string.toCharArray();
-        for (char value: array){
-            if (Character.isLetter(value)){
+        for (char value : array) {
+            if (Character.isLetter(value)) {
                 return false;
             }
         }
