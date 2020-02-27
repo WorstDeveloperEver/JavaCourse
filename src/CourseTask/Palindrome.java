@@ -8,37 +8,61 @@ public class Palindrome {
 
         System.out.println("Enter string:");
         String userString = scanner.nextLine();
+        
+        if (userString.equals("")){
+            System.out.println("Wrong string, there is no letters");
+            return;
+        }
+
+        if (isNoLettersString(userString)){
+            System.out.println("Wrong string, there is no letters");
+            return;
+        }
 
         System.out.printf("Is palindrome? %b", isPalindrome(userString));
     }
 
-    private static boolean isPalindrome(String userString) {
-        userString = userString.toLowerCase();
+    private static boolean isPalindrome(String string) {
+        string = string.toLowerCase();
 
-        for (int i = 0, j = userString.length() - 1; i < userString.length() / 2; i++, j--) {
-            char charCurrent = userString.charAt(i);
+        for (int i = 0, j = string.length() - 1; i < string.length() / 2; i++, j--) {
+            char compareChar = string.charAt(i);
 
-            while (!Character.isLetter(charCurrent)) {
-                charCurrent = userString.charAt(i + 1);
+            while (!Character.isLetter(compareChar)) {
+                compareChar = string.charAt(i + 1);
                 i++;
             }
 
-            char charToCompare = userString.charAt(j);
+            char leftChar = compareChar;
 
-            while (!Character.isLetter(charToCompare)) {
-                charToCompare = userString.charAt(j - 1);
+            compareChar = string.charAt(j);
+
+            while (!Character.isLetter(compareChar)) {
+                compareChar = string.charAt(j - 1);
                 j--;
             }
+
+            char rightChar = compareChar;
 
             if (i == j) {
                 return true;
             }
 
-            if (charCurrent != charToCompare) {
+            if (leftChar != rightChar) {
                 return false;
             }
         }
 
+        return true;
+    }
+
+    private static boolean isNoLettersString(String string){
+        char[] array = string.toCharArray();
+        for (char value: array){
+            if (Character.isLetter(value)){
+                return false;
+            }
+        }
         return true;
     }
 }
