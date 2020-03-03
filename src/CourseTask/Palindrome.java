@@ -15,7 +15,8 @@ public class Palindrome {
     private static boolean isPalindrome(String string) {
         string = string.toLowerCase();
 
-        for (int i = 0, j = string.length() - 1; i < string.length() / 2; i++, j--) {
+        int stringMiddle = string.length() / 2;
+        for (int i = 0, j = string.length() - 1; i < stringMiddle; i++, j--) {
             while (!Character.isLetter(string.charAt(i))) {
                 i++;
                 if (i == j) {
