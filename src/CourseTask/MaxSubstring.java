@@ -9,15 +9,14 @@ public class MaxSubstring {
         System.out.println("Enter string:");
         String userString = scanner.nextLine();
 
-        if (userString.length() == 1) {
-            System.out.print("Max substring length = 1");
-            return;
-        }
-
         System.out.printf("Max substring length = %d", getMaxSubstringLength(userString));
     }
 
     private static int getMaxSubstringLength(String userString) {
+        if (userString.length() == 1) {
+            return 1;
+        }
+
         userString = userString.toLowerCase();
 
         int maxSubstringLength = 0;
