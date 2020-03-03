@@ -24,7 +24,7 @@ public class BinarySearch {
 
         if (x > a[middle]) {
             return getBinarySearchRecursionIndex(a, middle + 1, right, x);
-        }else {
+        } else {
             return getBinarySearchRecursionIndex(a, left, middle - 1, x);
         }
     }
@@ -42,7 +42,7 @@ public class BinarySearch {
 
             if (x > a[middle]) {
                 left = middle + 1;
-            }else {
+            } else {
                 right = middle - 1;
             }
         }
