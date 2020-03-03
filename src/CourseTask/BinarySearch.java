@@ -2,15 +2,12 @@ package CourseTask;
 
 public class BinarySearch {
     public static void main(String[] args) {
-
         int[] a = {4, 8, 15, 16, 23, 42};
 
         int searchIndex = getBinarySearchRecursionIndex(a, 0, a.length - 1, 42);
-
         System.out.println("Searching by recursion, element index: " + searchIndex);
 
         searchIndex = getBinarySearchIndex(a, 42);
-
         System.out.println("Searching without recursion, element index: " + searchIndex);
     }
 
@@ -27,13 +24,9 @@ public class BinarySearch {
 
         if (x > a[middle]) {
             return getBinarySearchRecursionIndex(a, middle + 1, right, x);
-        }
-
-        if (x < a[middle]) {
+        }else {
             return getBinarySearchRecursionIndex(a, left, middle - 1, x);
         }
-
-        return -1;
     }
 
     public static int getBinarySearchIndex(int[] a, int x) {
@@ -49,9 +42,7 @@ public class BinarySearch {
 
             if (x > a[middle]) {
                 left = middle + 1;
-            }
-
-            if (x < a[middle]) {
+            }else {
                 right = middle - 1;
             }
         }
