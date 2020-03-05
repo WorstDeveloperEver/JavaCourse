@@ -15,7 +15,7 @@ public class BubbleSort {
 
     public static void toBubbleSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
-            int count = 0;
+            int swapCount = 0;
 
             for (int j = 0; j < array.length - 1; j++) {
                 if (array[j] > array[j + 1]) {
@@ -23,11 +23,11 @@ public class BubbleSort {
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
 
-                    count++;
+                    swapCount++;
                 }
             }
 
-            if (count == 0) {
+            if (swapCount == 0) {
                 break;
             }
         }
