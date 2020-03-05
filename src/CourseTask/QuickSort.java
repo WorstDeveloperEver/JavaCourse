@@ -10,7 +10,7 @@ public class QuickSort {
 
         quickSort(array, 0, array.length - 1);
 
-        //System.out.println("Sorted array : " + Arrays.toString(array));
+        System.out.println("Sorted array : " + Arrays.toString(array));
     }
 
     public static void quickSort(int[] array, int left, int right) {
@@ -28,34 +28,25 @@ public class QuickSort {
             }
         }
 
-        int middle = (left + right) / 2;
+        int middle = array[(left + right) / 2];
         int i = left;
         int j = right;
 
         while (i <= j) {
-            int tempLeft = 0;
-            for (; i <= right; i++) {
-                if (array[i] >= array[middle]) {
-                    tempLeft = i;
-                    break;
-                }
+            while (array[i] < middle){
+                i++;
             }
-
-            int tempRight = 0;
-            for (; j >= left; j--) {
-                if (array[j] <= array[middle]) {
-                    tempRight = j;
-                    break;
-                }
+            while (array[j] > middle){
+                j--;
             }
+            if (i <= j){
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
 
-            int temp = array[tempRight];
-            array[tempRight] = array[tempLeft];
-            array[tempLeft] = temp;
-
-            i++;
-            j--;
-            System.out.println("Sours array : " + Arrays.toString(array));
+                i++;
+                j--;
+            }
         }
 
         if (i < right) {
