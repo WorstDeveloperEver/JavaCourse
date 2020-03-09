@@ -11,6 +11,7 @@ public class SplitString {
         for (String s : numberString) {
             sum += Integer.parseInt(s);
         }
+
         System.out.println("Sum numbers in string = " + sum);
     }
 }
