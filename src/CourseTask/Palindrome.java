@@ -16,9 +16,9 @@ public class Palindrome {
         string = string.toLowerCase();
 
         int left = 0;
-        int right = string.length()-1;
+        int right = string.length() - 1;
 
-        while (left <= right){
+        while (left <= right) {
             while (!Character.isLetter(string.charAt(left))) {
                 left++;
                 if (left == right) {
