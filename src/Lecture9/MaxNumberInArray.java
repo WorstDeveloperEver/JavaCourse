@@ -1,6 +1,6 @@
 package Lecture9;
 
-public class ArrayNumberMax {
+public class MaxNumberInArray {
     public static void main(String[] args) {
         double[] array = {2, 95, 15, 16, 89, 4, 9};
 
