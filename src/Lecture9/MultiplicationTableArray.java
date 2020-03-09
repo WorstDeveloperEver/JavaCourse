@@ -10,6 +10,7 @@ public class MultiplicationTableArray {
             for (int j = 0; j < column; j++) {
                 System.out.printf("%4d", multiplicationTable[i][j]);
             }
+
             System.out.println();
         }
     }
