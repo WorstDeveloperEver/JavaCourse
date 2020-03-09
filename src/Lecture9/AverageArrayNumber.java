@@ -1,6 +1,6 @@
 package Lecture9;
 
-public class ArrayNumberAverage {
+public class AverageArrayNumber {
     public static void main(String[] args) {
         int[] array = {2, 95, 15, 16, 90, 6, 9};
 
@@ -8,7 +8,7 @@ public class ArrayNumberAverage {
     }
 
     public static double getEvenNumbersAverage(int[] array) {
-        double count = 0;
+        int count = 0;
         int sum = 0;
 
         for (int value : array) {
@@ -18,6 +18,6 @@ public class ArrayNumberAverage {
             }
         }
 
-        return sum / count;
+        return (double) sum / count;
     }
 }
