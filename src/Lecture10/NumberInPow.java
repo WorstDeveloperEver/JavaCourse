@@ -20,7 +20,7 @@ public class NumberInPow {
     public static int getNumberInPow(int number, int degree) {
         int sum = 1;
         for (int i = 0; i < degree; i++) {
-        sum *=number;
+            sum *= number;
         }
         return sum;
     }
