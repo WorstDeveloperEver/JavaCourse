@@ -2,23 +2,23 @@ package Lecture9;
 
 public class MultiplicationTableArray {
     public static void main(String[] args) {
-        final int size = 10;
-        int[][] multiplicationTable = getMultiplicationTable(size);
+        final int row = 12;
+        final int column = 10;
+        int[][] multiplicationTable = getMultiplicationTable(row, column);
 
-        for (int[] ints : multiplicationTable) {
-            for (int i = 0; i < multiplicationTable.length; i++) {
-                System.out.printf("%4d", ints[i]);
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                System.out.printf("%4d", multiplicationTable[i][j]);
             }
-
             System.out.println();
         }
     }
 
-    public static int[][] getMultiplicationTable(int size) {
-        int[][] multiplicationTable = new int[size][size];
+    public static int[][] getMultiplicationTable(int row, int column) {
+        int[][] multiplicationTable = new int[row][column];
 
-        for (int i = 0; i < multiplicationTable.length; i++) {
-            for (int j = 0; j < multiplicationTable.length; j++) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
                 multiplicationTable[i][j] = (j + 1) * (i + 1);
             }
         }
