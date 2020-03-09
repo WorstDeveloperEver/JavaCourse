@@ -8,26 +8,26 @@ public class BubbleSort {
 
         System.out.println("Sours array : " + Arrays.toString(array));
 
-        toBubbleSort(array);
+        doBubbleSort(array);
 
         System.out.println("Sorted array : " + Arrays.toString(array));
     }
 
-    public static void toBubbleSort(int[] array) {
-        for (int i = 0; i < array.length - 1; i++) {
-            int swapCount = 0;
+    public static void doBubbleSort(int[] array) {
+        for (int i = array.length - 1; i >= 1; i--) {
+            boolean isSorted = true;
 
-            for (int j = 0; j < array.length - 1; j++) {
+            for (int j = 0; j < i; j++) {
                 if (array[j] > array[j + 1]) {
                     int temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
 
-                    swapCount++;
+                    isSorted = false;
                 }
             }
 
-            if (swapCount == 0) {
+            if (isSorted) {
                 break;
             }
         }
