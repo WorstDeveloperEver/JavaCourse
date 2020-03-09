@@ -15,26 +15,31 @@ public class Palindrome {
     private static boolean isPalindrome(String string) {
         string = string.toLowerCase();
 
-        int stringMiddle = string.length() / 2;
-        for (int i = 0, j = string.length() - 1; i < stringMiddle; i++, j--) {
-            while (!Character.isLetter(string.charAt(i))) {
-                i++;
-                if (i == j) {
-                    return false;
+        int left = 0;
+        int right = string.length()-1;
+
+        while (left <= right){
+            while (!Character.isLetter(string.charAt(left))) {
+                left++;
+                if (left == right) {
+                    return true;
                 }
             }
 
-            while (!Character.isLetter(string.charAt(j))) {
-                j--;
+            while (!Character.isLetter(string.charAt(right))) {
+                right--;
             }
 
-            if (i == j) {
+            if (left == right) {
                 return true;
             }
 
-            if (string.charAt(i) != string.charAt(j)) {
+            if (string.charAt(left) != string.charAt(right)) {
                 return false;
             }
+
+            left++;
+            right--;
         }
 
         return true;
