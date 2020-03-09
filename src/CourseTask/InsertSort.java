@@ -15,7 +15,6 @@ public class InsertSort {
 
     public static void doInsertSort(int[] array) {
         for (int i = 0; i < array.length; i++) {
-
             int temp = array[i];
             int j = i - 1;
 
