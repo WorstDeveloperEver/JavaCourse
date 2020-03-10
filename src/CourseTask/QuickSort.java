@@ -52,10 +52,9 @@ public class QuickSort {
                 array[0] = array[1];
                 array[1] = temp;
 
-                return;
-            } else {
-                return;
             }
+
+            return;
         }
 
         if (i < right) {
