@@ -6,14 +6,14 @@ public class PyramidalSort {
     public static void main(String[] args) {
         int[] array = {10, 2, 3, 6, 8, 7, 1, 12};
 
-        System.out.println("Sours array : " + Arrays.toString(array));
+        System.out.println("Source array: " + Arrays.toString(array));
 
-        pyramidalSort(array);
+        sort(array);
 
-        System.out.println("Sorted array : " + Arrays.toString(array));
+        System.out.println("Sorted array: " + Arrays.toString(array));
     }
 
-    public static void pyramidalSort(int[] array) {
+    public static void sort(int[] array) {
         int length = array.length;
 
         for (int i = length / 2 - 1; i >= 0; i--) {
@@ -31,23 +31,28 @@ public class PyramidalSort {
 
     public static void doScreening(int[] array, int parent, int length) {
         int max = parent;
-        int left = 2 * parent + 1;
-        int right = 2 * parent + 2;
 
-        if (left < length && array[left] > array[max]) {
-            max = left;
-        }
+        while (true) {
+            int left = 2 * parent + 1;
+            int right = 2 * parent + 2;
 
-        if (right < length && array[right] > array[max]) {
-            max = right;
-        }
+            if (left < length && array[left] > array[max]) {
+                max = left;
+            }
 
-        if (max != parent) {
-            int temp = array[parent];
-            array[parent] = array[max];
-            array[max] = temp;
+            if (right < length && array[right] > array[max]) {
+                max = right;
+            }
 
-            doScreening(array, max, length);
+            if (max != parent) {
+                int temp = array[parent];
+                array[parent] = array[max];
+                array[max] = temp;
+
+                parent = max;
+            } else {
+                return;
+            }
         }
     }
 }
