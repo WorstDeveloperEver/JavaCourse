@@ -47,6 +47,7 @@ public class ContainsNumber {
 
             i = right + 1;
         }
+
         return count;
     }
 }
