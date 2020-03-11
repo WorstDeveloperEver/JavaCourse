@@ -10,7 +10,7 @@ public class IncludesNumber {
 
         try (Scanner scanner = new Scanner(new FileInputStream("./src/Files/text.txt"))) {
             while (scanner.hasNextLine()) {
-                count += getContainsCount(scanner.nextLine(), "java");
+                count += getContainsCount(scanner.nextLine(), "jAvA");
             }
         }
 
@@ -20,6 +20,7 @@ public class IncludesNumber {
     public static int getContainsCount(String string, String searchString) {
         int count = 0;
         int i = 0;
+        searchString = searchString.toLowerCase();
 
         while (true) {
             int left = i;
