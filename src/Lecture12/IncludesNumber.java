@@ -10,14 +10,14 @@ public class IncludesNumber {
 
         try (Scanner scanner = new Scanner(new FileInputStream("./src/Files/text.txt"))) {
             while (scanner.hasNextLine()) {
-                count+= getContainsCount(scanner.nextLine(), "java");
+                count += getContainsCount(scanner.nextLine(), "java");
             }
         }
 
         System.out.println("The number of includes of the Java string in the file = " + count);
     }
 
-    public static int getContainsCount(String string, String searchString){
+    public static int getContainsCount(String string, String searchString) {
         int count = 0;
         int i = 0;
 
