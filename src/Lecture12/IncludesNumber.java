@@ -18,7 +18,7 @@ public class IncludesNumber {
                     int left = i;
                     int right = string.indexOf(" ", i);
 
-                    if (right < left){
+                    if (right < left) {
                         String compareString = string.substring(left).toLowerCase();
 
                         if (compareString.contains("java")) {
@@ -33,7 +33,7 @@ public class IncludesNumber {
                         count++;
                     }
 
-                    if (right == string.length()){
+                    if (right == string.length()) {
                         break;
                     }
 
