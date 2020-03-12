@@ -13,6 +13,10 @@ public class Palindrome {
     }
 
     private static boolean isPalindrome(String string) {
+        if (string.length() <= 1){
+            return true;
+        }
+
         string = string.toLowerCase();
 
         int left = 0;
