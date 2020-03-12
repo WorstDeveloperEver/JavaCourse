@@ -17,14 +17,14 @@ public class EuclideanAlgorithmRecursion {
             return;
         }
 
-        System.out.println("Largest common divider: " + getLargestCommonDivider(a, b));
+        System.out.println("Largest common divider: " + getGreatestCommonDivisor(a, b));
     }
 
-    public static int getLargestCommonDivider(int a, int b) {
+    public static int getGreatestCommonDivisor(int a, int b) {
         if (b == 0) {
             return a;
         }
 
-        return getLargestCommonDivider(b, a % b);
+        return getGreatestCommonDivisor(b, a % b);
     }
 }
