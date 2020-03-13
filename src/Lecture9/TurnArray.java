@@ -6,12 +6,12 @@ public class TurnArray {
     public static void main(String[] args) {
         int[] array = {2, 95, 15, 16, 90, 6, 9, 10};
 
-        doTurnArray(array);
+        expandArray(array);
 
         System.out.print(Arrays.toString(array));
     }
 
-    public static void doTurnArray(int[] array) {
+    public static void expandArray(int[] array) {
         int arrayMiddleIndex = array.length / 2;
 
         for (int i = 0; i < arrayMiddleIndex; i++) {
