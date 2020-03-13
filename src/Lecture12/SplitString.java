@@ -4,11 +4,11 @@ public class SplitString {
     public static void main(String[] args) {
         String string = " 1, 2, 3, 4, 5 ";
 
-        String[] numberString = string.trim().split(", ");
+        String[] numbersString = string.trim().split(", ");
 
         int sum = 0;
 
-        for (String s : numberString) {
+        for (String s : numbersString) {
             sum += Integer.parseInt(s);
         }
 
