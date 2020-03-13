@@ -1,6 +1,6 @@
 package Lecture9;
 
-public class AverageNumberInArray {
+public class ArrayNumbersAverage {
     public static void main(String[] args) {
         int[] array = {2, 95, 15, 16, 90, 6, 9};
 
