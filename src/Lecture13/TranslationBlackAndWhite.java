@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 
 
-public class BlackAndWhiteTranslation {
+public class TranslationBlackAndWhite {
     public static void main(String[] args) throws IOException {
         BufferedImage image = ImageIO.read(new File("./src/Files/image.jpg"));
         
