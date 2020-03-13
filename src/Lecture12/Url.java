@@ -4,13 +4,17 @@ public class Url {
     public static void main(String[] args) {
         String userString = "http://someservername/abcd/dfdf.htm?dfdf=dfdf";
 
-        int firstSlashIndex = userString.indexOf("//");
-        String serverName = userString.substring(firstSlashIndex + 2);
+        System.out.println("Server name: " + getServerName(userString));
+    }
 
-        if (serverName.indexOf("/") > 0) {
-            serverName = serverName.substring(0, serverName.indexOf("/"));
+    public static String getServerName(String userString) {
+        int firstIndex = userString.indexOf("://") + 3;
+        int lastIndex = userString.indexOf("/", firstIndex);
+
+        if (lastIndex != -1) {
+            return userString.substring(firstIndex, lastIndex);
         }
 
-        System.out.println("Server name: " + serverName);
+        return userString.substring(firstIndex);
     }
 }
