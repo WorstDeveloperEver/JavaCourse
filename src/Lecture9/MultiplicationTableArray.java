@@ -2,24 +2,24 @@ package Lecture9;
 
 public class MultiplicationTableArray {
     public static void main(String[] args) {
-        final int row = 12;
-        final int column = 10;
-        int[][] multiplicationTable = getMultiplicationTable(row, column);
+        final int rowsAmount = 12;
+        final int columnsAmount = 10;
+        int[][] multiplicationTable = getMultiplicationTable(rowsAmount, columnsAmount);
 
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < column; j++) {
-                System.out.printf("%4d", multiplicationTable[i][j]);
+        for (int[] innerArray : multiplicationTable) {
+            for (int value : innerArray) {
+                System.out.printf("%4d", value);
             }
 
             System.out.println();
         }
     }
 
-    public static int[][] getMultiplicationTable(int row, int column) {
-        int[][] multiplicationTable = new int[row][column];
+    public static int[][] getMultiplicationTable(int rowsAmount, int columnsAmount) {
+        int[][] multiplicationTable = new int[rowsAmount][columnsAmount];
 
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < column; j++) {
+        for (int i = 0; i < rowsAmount; i++) {
+            for (int j = 0; j < columnsAmount; j++) {
                 multiplicationTable[i][j] = (j + 1) * (i + 1);
             }
         }
