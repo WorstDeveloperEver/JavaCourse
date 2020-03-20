@@ -2,9 +2,9 @@ package Lecture12;
 
 public class Url {
     public static void main(String[] args) {
-        String userString = "http://someservername/abcd/dfdf.htm?dfdf=dfdf";
+        String url = "http://someservername/abcd/dfdf.htm?dfdf=dfdf";
 
-        System.out.println("Server name: " + getServerName(userString));
+        System.out.println("Server name: " + getServerName(url));
     }
 
     public static String getServerName(String userString) {
