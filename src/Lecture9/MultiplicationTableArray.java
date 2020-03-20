@@ -6,8 +6,8 @@ public class MultiplicationTableArray {
         final int columnsAmount = 10;
         int[][] multiplicationTable = getMultiplicationTable(rowsAmount, columnsAmount);
 
-        for (int[] innerArray : multiplicationTable) {
-            for (int value : innerArray) {
+        for (int[] row : multiplicationTable) {
+            for (int value : row) {
                 System.out.printf("%4d", value);
             }
 
