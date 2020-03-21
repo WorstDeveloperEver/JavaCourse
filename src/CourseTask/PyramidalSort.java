@@ -20,7 +20,7 @@ public class PyramidalSort {
             doScreening(array, i, length);
         }
 
-        for (int i = length - 1; i >= 0; i--) {
+        for (int i = length - 1; i > 0; i--) {
             int temp = array[0];
             array[0] = array[i];
             array[i] = temp;
