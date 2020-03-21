@@ -14,6 +14,20 @@ public class QuickSort {
     }
 
     public static void quickSort(int[] array, int left, int right) {
+        if (right - left == 0) {
+            return;
+        }
+
+        if (right - left == 1) {
+            if (array[left] > array[right]) {
+                int temp = array[left];
+                array[left] = array[right];
+                array[right] = temp;
+            }
+
+            return;
+        }
+
         if (array.length == 0) {
             return;
         }
@@ -40,21 +54,6 @@ public class QuickSort {
                 i++;
                 j--;
             }
-        }
-
-        if (right - left == 1) {
-            return;
-        }
-
-        if (right - left == 2) {
-            if (array[0] > array[1]) {
-                int temp = array[0];
-                array[0] = array[1];
-                array[1] = temp;
-
-            }
-
-            return;
         }
 
         if (i < right) {
